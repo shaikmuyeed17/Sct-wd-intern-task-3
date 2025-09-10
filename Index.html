@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Sci-Fi Tic-Tac-Toe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="t3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Neon Sci-Fi Tic-Tac-Toe</h1>
+
+        <!-- Mode Selection -->
+        <div id="mode-selection" class="menu">
+            <h2>Choose Mode</h2>
+            <button onclick="startGame('pvp')">Player vs Player</button>
+            <button onclick="selectDifficulty()">Player vs Computer</button>
+        </div>
+
+        <!-- Difficulty Selection -->
+        <div id="difficulty-selection" class="menu hidden">
+            <h2>Choose Difficulty</h2>
+            <button onclick="startGame('pvc', 'easy')">Easy (Random)</button>
+            <button onclick="startGame('pvc', 'hard')">Hard (Minimax AI)</button>
+        </div>
+
+        <!-- Symbol Selection -->
+        <div id="symbol-selection" class="menu hidden">
+            <h2>Choose Your Symbol</h2>
+            <button onclick="setPlayerSymbol('X')">X</button>
+            <button onclick="setPlayerSymbol('O')">O</button>
+        </div>
+
+        <!-- Game Board -->
+        <div id="game" class="hidden">
+            <div id="status"></div>
+            <div id="timer">Time left: 10s</div>
+            <div class="board" id="board"></div>
+            <button id="restart" onclick="restartGame()">Restart</button>
+        </div>
+    </div>
+    <script src="t3.js"></script>
+</body>
+</html>
